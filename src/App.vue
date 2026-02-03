@@ -1,45 +1,55 @@
 <template>
 
-  <h1>Daily Todo</h1>
+  <Layout>
+    <template v-slot:header>
+      <h1>Daily Todo</h1>
+    </template>
 
-    <form action="" @submit.prevent="addTodo">
-      <fieldset role="group">
-        <input
-          type="text"
-          v-model="newTodo"
-          placeholder="Ajouter une tâche"
-        />
+    <template v-slot:main>
 
-        <button :disabled="newTodo===0" type="submit">Ajouter</button>
-      </fieldset>
-    </form>
+      <form action="" @submit.prevent="addTodo">
+        <fieldset role="group">
+          <input
+            type="text"
+            v-model="newTodo"
+            placeholder="Ajouter une tâche"
+          />
 
-  <div v-if="todos.length ===0"> Vous n'avez pas encore de tâches à faire.</div>
-  <div v-else>
-    <ul>
-      <li v-for="todo in computedSortedTodos"
-          :key="todo.date"
-          :class="{completed:todo.completed}"
-        >
+          <button :disabled="newTodo===0" type="submit">Ajouter</button>
+        </fieldset>
+      </form>
+
+      <div v-if="todos.length ===0"> Vous n'avez pas encore de tâches à faire.</div>
+      <div v-else>
+        <ul>
+          <li v-for="todo in computedSortedTodos"
+              :key="todo.date"
+              :class="{completed:todo.completed}"
+            >
+            <label>
+              <input type="checkbox" name="" id="" v-model="todo.completed" />
+                {{ todo.title }}
+            </label>
+
+          </li>
+        </ul>
+      </div>
+
+      <div>
         <label>
-          <input type="checkbox" name="" id="" v-model="todo.completed" />
-            {{ todo.title }}
+          <input type="checkbox" v-model="hideCompleted" />
+          Masquer les tâches complétées
         </label>
+      </div>
+      <p v-if="remainingTodos >0">
+        Il vous reste {{ remainingTodos }} tâche{{ remainingTodos > 1 ? 's' : '' }} à faire.
+      </p>
+    </template>
 
-      </li>
-    </ul>
-  </div>
-
-  <div>
-    <label>
-      <input type="checkbox" v-model="hideCompleted" />
-      Masquer les tâches complétées
-    </label>
-  </div>
-  <p v-if="remainingTodos >0">
-    Il vous reste {{ remainingTodos }} tâche{{ remainingTodos > 1 ? 's' : '' }} à faire.
-  </p>
-
+    <template v-slot:footer>
+      <p>© 2026 Mon Application Todo</p>
+    </template>
+  </Layout>
 </template>
 
 
@@ -47,6 +57,7 @@
 <script setup>
 
 import {computed, ref} from 'vue';
+import Layout from './Layout.vue';
 
 const hideCompleted = ref(false);
 const newTodo = ref('');
