@@ -17,7 +17,7 @@
   <div v-if="todos.length ===0"> Vous n'avez pas encore de tâches à faire.</div>
   <div v-else>
     <ul>
-      <li v-for="todo in sortedTodos()"
+      <li v-for="todo in computedSortedTodos"
           :key="todo.date"
           :class="{completed:todo.completed}"
         >
@@ -36,6 +36,9 @@
       Masquer les tâches complétées
     </label>
   </div>
+  <p v-if="remainingTodos >0">
+    Il vous reste {{ remainingTodos }} tâche{{ remainingTodos > 1 ? 's' : '' }} à faire.
+  </p>
 
 </template>
 
@@ -43,7 +46,7 @@
 
 <script setup>
 
-import {ref} from 'vue';
+import {computed, ref} from 'vue';
 
 const hideCompleted = ref(false);
 const newTodo = ref('');
@@ -71,18 +74,20 @@ const addTodo = () => {
   }
 };
 
-const sortedTodos = () => {
-  // todos.value.sort((a,b) => a.completed - b.completed);
-  // return todos.value;
-  const sortedTodos = todos.value.toSorted((a,b) => a.completed - b.completed);
+// using computed property to automatically update the list when todos or hideCompleted change
+const computedSortedTodos = computed(() => {
+    const sortedTodos = todos.value.toSorted((a,b) => a.completed - b.completed);
+
   if (hideCompleted.value === true) {
     return sortedTodos.filter(t => t.completed === false);
   }
 
   return sortedTodos;
-};
+});
 
-
+const remainingTodos = computed(() => {
+  return todos.value.filter(t => t.completed === false).length;
+});
 
 </script>
 
