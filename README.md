@@ -38,3 +38,7 @@ npm run build
 ```
 
 https://www.youtube.com/watch?v=uMisPCh3Yh0&list=PLjwdMgw5TTLVQgowwmhNCpXfHMfM9Jove&index=8
+
+### Api resources
+
+  -[Google Api](https://ai.google.dev/gemini-api/docs?hl=de#javascript)
