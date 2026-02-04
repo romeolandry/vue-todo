@@ -49,6 +49,12 @@
           <button @click="showTimer = !showTimer">sow/hidde</button>
           <Timer v-if="showTimer" />
       </div>
+
+      <div>
+        <h1>Vue Watchers : change html page title </h1>
+          <input type="text" v-model="name">
+      </div>
+
     </template>
 
     <template v-slot:footer>
@@ -61,14 +67,16 @@
 
 <script setup>
 
-import {computed, ref} from 'vue';
+import {computed, ref, watch} from 'vue';
 import Layout from './Layout.vue';
 import Timer from './Timer.vue';
+
 
 
 const hideCompleted = ref(false);
 const newTodo = ref('');
 const showTimer = ref(true);
+const name = ref('');
 
 const todos = ref([{
     title: 'Apprendre Vue.js',
@@ -108,6 +116,14 @@ const computedSortedTodos = computed(() => {
 const remainingTodos = computed(() => {
   return todos.value.filter(t => t.completed === false).length;
 });
+
+// watch the name value and update the page title
+watch(name, (newValue, oldValue) => {
+  document.title = newValue;
+},{
+  immediate: true // run the watcher when the component is mounted
+});
+
 
 </script>
 
