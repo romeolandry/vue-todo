@@ -13,13 +13,12 @@ const props = defineProps({
 });
 
 const score = computed(() => {
-    let correct = 0;
-    props.answers.forEach((answer, index) => {
-        if(answer === props.quiz.questions[index].answer){
-            correct++;
+    return props.quiz.questions.reduce((acc, question, index) => {
+        if(question.correct_answer === props.answers[index]){
+            acc++;
         }
-    });
-    return correct;
+        return acc;
+    }, 0)
 });
 
 const hasWon = computed(() => score.value > props.quiz.minimun_score);

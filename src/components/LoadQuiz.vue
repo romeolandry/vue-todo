@@ -4,6 +4,7 @@
         <Progress :value="step" :max="quiz.questions.length -1" />
         <Question :question="question" v-if="state === 'question'" @answer="addAnswer" />
         <Recap v-if="state === 'recap'" :answers="answers" :quiz="quiz" />
+        {{ answers }}
     </div>
 </template>
 <script setup>
