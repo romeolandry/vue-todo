@@ -2,10 +2,15 @@
     <h1> Recap</h1>
     <p>You {{ hasWon ? quiz.success_message : quiz.failure_message }}</p>
     <p>You scored {{ score }} out of {{ props.quiz.questions.length }}</p>
+    <History
+        :answers="answers"
+        :quiz="props.quiz"
+    />
 </template>
 <script setup>
 
 import { computed, ref } from 'vue';
+import History from './History.vue';
 
 const props = defineProps({
     answers: Array,

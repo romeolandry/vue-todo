@@ -12,3 +12,9 @@ export function shuffleArray(array){
     .sort((a,b) => a.sort - b.sort)
     .map(({value}) => value);
 }
+
+
+// using array of Questions and one answer return Question with the given answer as choices
+export function getQuestion(questions, answer){
+    return question = questions.find(q => q.choices.includes(answer));
+}
