@@ -55,6 +55,12 @@
           <input type="text" v-model="name">
       </div>
 
+      <div>
+        <h1>Timer: used lifecycle hooks and composable functions</h1>
+          Temps ecoulé : {{ time }}
+          <button @click="reset">Reset</button>
+      </div>
+
     </template>
 
     <template v-slot:footer>
@@ -70,13 +76,13 @@
 import {computed, ref, watch} from 'vue';
 import Layout from './Layout.vue';
 import Timer from './Timer.vue';
-
-
+import { useTimer } from './composable/useTimer';
 
 const hideCompleted = ref(false);
 const newTodo = ref('');
 const showTimer = ref(true);
 const name = ref('');
+const { time, reset} = useTimer();
 
 const todos = ref([{
     title: 'Apprendre Vue.js',
