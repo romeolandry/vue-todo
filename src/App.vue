@@ -5,6 +5,16 @@
       <h1>Daily Todo</h1>
     </template>
 
+    <template v-slot:aside>
+      <aside>
+        <nav>
+          <ul>
+            <li><a :href="{currentView}" @click="currentView=AppQuiz">About</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </template>
+
     <template v-slot:main>
 
       <form action="" @submit.prevent="addTodo">
@@ -77,6 +87,10 @@ import {computed, ref, watch} from 'vue';
 import Layout from './Layout.vue';
 import Timer from './Timer.vue';
 import { useTimer } from './composable/useTimer';
+import AppQuiz from './pages/QuizPage.vue';
+// const { page , param} = usePage();
+
+const currentView = ref(AppQuiz)
 
 const hideCompleted = ref(false);
 const newTodo = ref('');

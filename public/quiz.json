@@ -1,0 +1,307 @@
+{
+  "title": "The Ultimate Question Mega Quiz",
+  "minimun_score":7,
+  "success_message": "Congratulations! You have passed the quiz.",
+  "failure_message": "Sorry, you have failed the quiz.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "choices": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "correct_answer": "Mars"
+    },
+    {
+      "id": 2,
+      "question": "What is the chemical symbol for gold?",
+      "choices": ["Gd", "Ag", "Au", "Fe"],
+      "correct_answer": "Au"
+    },
+    {
+      "id": 5,
+      "question": "Which element has the atomic number 1?",
+      "choices": ["Helium", "Oxygen", "Hydrogen", "Lithium"],
+      "correct_answer": "Hydrogen"
+    },
+    {
+      "id": 6,
+      "question": "What is the capital of Japan?",
+      "choices": ["Seoul", "Beijing", "Tokyo", "Bangkok"],
+      "correct_answer": "Tokyo"
+    },
+    {
+      "id": 7,
+      "question": "Who painted the Mona Lisa?",
+      "choices": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+      "correct_answer": "Leonardo da Vinci"
+    },
+    {
+      "id": 8,
+      "question": "What is the largest ocean on Earth?",
+      "choices": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "correct_answer": "Pacific Ocean"
+    },
+    {
+      "id": 9,
+      "question": "Which unit is used to measure electrical resistance?",
+      "choices": ["Volt", "Ampere", "Watt", "Ohm"],
+      "correct_answer": "Ohm"
+    },
+    {
+      "id": 10,
+      "question": "In what year did the Titanic sink?",
+      "choices": ["1905", "1912", "1920", "1933"],
+      "correct_answer": "1912"
+    },
+    {
+      "id": 11,
+      "question": "What is the smallest prime number?",
+      "choices": ["0", "1", "2", "3"],
+      "correct_answer": "2"
+    },
+    {
+      "id": 12,
+      "question": "Which organ in the human body is responsible for pumping blood?",
+      "choices": ["Lungs", "Brain", "Liver", "Heart"],
+      "correct_answer": "Heart"
+    },    {
+      "id": 13,
+      "question": "Which is the longest river in the world?",
+      "choices": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+      "correct_answer": "Nile"
+    },
+    {
+      "id": 14,
+      "question": "Which country has the largest population in the world?",
+      "choices": ["USA", "India", "China", "Russia"],
+      "correct_answer": "India"
+    },
+    {
+      "id": 15,
+      "question": "What is the capital city of France?",
+      "choices": ["Lyon", "Marseille", "Paris", "Nice"],
+      "correct_answer": "Paris"
+    },
+    {
+      "id": 16,
+      "question": "In which mountain range is Mount Everest located?",
+      "choices": ["Andes", "Rockies", "Alps", "Himalayas"],
+      "correct_answer": "Himalayas"
+    },
+    {
+      "id": 17,
+      "question": "Which desert is the largest hot desert in the world?",
+      "choices": ["Gobi", "Kalahari", "Sahara", "Atacama"],
+      "correct_answer": "Sahara"
+    },
+    {
+      "id": 18,
+      "question": "What is the smallest country in the world by land area?",
+      "choices": ["Monaco", "Vatican City", "Nauru", "Tuvalu"],
+      "correct_answer": "Vatican City"
+    },
+    {
+      "id": 19,
+      "question": "Which country is also known as the 'Land of the Rising Sun'?",
+      "choices": ["Japan", "South Korea", "China", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "id": 20,
+      "question": "What is the capital of Australia?",
+      "choices": ["Sydney", "Melbourne", "Canberra", "Perth"],
+      "correct_answer": "Canberra"
+    },
+    {
+      "id": 21,
+      "question": "Which of these countries is NOT in Africa?",
+      "choices": ["Egypt", "Nigeria", "Brazil", "Kenya"],
+      "correct_answer": "Brazil"
+    },
+    {
+      "id": 22,
+      "question": "What is the largest island in the world?",
+      "choices": ["Iceland", "Greenland", "Madagascar", "Tasmania"],
+      "correct_answer": "Greenland"
+    },
+    {
+      "id": 23,
+      "question": "Which canal connects the Atlantic and Pacific Oceans?",
+      "choices": ["Suez Canal", "Panama Canal", "Corinth Canal", "Kiel Canal"],
+      "correct_answer": "Panama Canal"
+    },
+    {
+      "id": 24,
+      "question": "What is the currency of the United Kingdom?",
+      "choices": ["Euro", "Dollar", "Pound Sterling", "Yen"],
+      "correct_answer": "Pound Sterling"
+    },
+    {
+      "id": 25,
+      "question": "Which U.S. state is known as the 'Sunshine State'?",
+      "choices": ["California", "Texas", "Florida", "Arizona"],
+      "correct_answer": "Florida"
+    },
+    {
+      "id": 26,
+      "question": "Which European city is famous for its canals and gondolas?",
+      "choices": ["Amsterdam", "Venice", "Bruges", "Hamburg"],
+      "correct_answer": "Venice"
+    },
+    {
+      "id": 27,
+      "question": "What is the official language of Brazil?",
+      "choices": ["Spanish", "Portuguese", "French", "English"],
+      "correct_answer": "Portuguese"
+    },
+    {
+      "id": 28,
+      "question": "Which of the Great Lakes is the largest by surface area?",
+      "choices": ["Lake Michigan", "Lake Erie", "Lake Ontario", "Lake Superior"],
+      "correct_answer": "Lake Superior"
+    },
+    {
+      "id": 29,
+      "question": "In which country can you find the ancient ruins of Machu Picchu?",
+      "choices": ["Chile", "Peru", "Colombia", "Mexico"],
+      "correct_answer": "Peru"
+    },
+    {
+      "id": 30,
+      "question": "Which sea lies between Europe and Africa?",
+      "choices": ["Red Sea", "Caspian Sea", "Mediterranean Sea", "Dead Sea"],
+      "correct_answer": "Mediterranean Sea"
+    },
+    {
+      "id": 31,
+      "question": "What is the capital of Canada?",
+      "choices": ["Toronto", "Vancouver", "Montreal", "Ottawa"],
+      "correct_answer": "Ottawa"
+    },
+    {
+      "id": 32,
+      "question": "Which continent is known as the 'Dark Continent'?",
+      "choices": ["Asia", "South America", "Africa", "Antarctica"],
+      "correct_answer": "Africa"
+    },
+        {
+      "id": 33,
+      "question": "Which artist has the most streams on Spotify as of early 2026?",
+      "choices": ["The Weeknd", "Taylor Swift", "Drake", "Bad Bunny"],
+      "correct_answer": "Taylor Swift"
+    },
+    {
+      "id": 34,
+      "question": "What was the highest-grossing film of 2024?",
+      "choices": ["Inside Out 2", "Deadpool & Wolverine", "Dune: Part Two", "Despicable Me 4"],
+      "correct_answer": "Inside Out 2"
+    },
+    {
+      "id": 35,
+      "question": "Which artist released the album 'Cowboy Carter' in 2024?",
+      "choices": ["Miley Cyrus", "Lana Del Rey", "Beyoncé", "Kacey Musgraves"],
+      "correct_answer": "Beyoncé"
+    },
+    {
+      "id": 36,
+      "question": "What is the name of the fictional town in 'Stranger Things'?",
+      "choices": ["Riverdale", "Hawkins", "Derry", "Sunnydale"],
+      "correct_answer": "Hawkins"
+    },
+    {
+      "id": 37,
+      "question": "Which social media platform launched 'Threads' in 2023?",
+      "choices": ["TikTok", "Meta", "Google", "Twitter"],
+      "correct_answer": "Meta"
+    },
+    {
+      "id": 38,
+      "question": "Who played Barbie in the 2023 'Barbie' movie?",
+      "choices": ["Margot Robbie", "Emma Stone", "Scarlett Johansson", "Florence Pugh"],
+      "correct_answer": "Margot Robbie"
+    },
+    {
+      "id": 39,
+      "question": "Which viral phenomenon dominated social media in the summer of 2024?",
+      "choices": ["Barbiecore", "Brat Summer", "Quiet Quitting", "Ice Bucket Challenge"],
+      "correct_answer": "Brat Summer"
+    },
+    {
+      "id": 40,
+      "question": "Who performed the halftime show at Super Bowl LIX in 2025?",
+      "choices": ["Usher", "Rihanna", "Kendrick Lamar", "SZA"],
+      "correct_answer": "Kendrick Lamar"
+    },
+    {
+      "id": 41,
+      "question": "In the Marvel Cinematic Universe, what is the real name of Black Panther?",
+      "choices": ["T'Challa", "M'Baku", "Killmonger", "Shuri"],
+      "correct_answer": "T'Challa"
+    },
+    {
+      "id": 42,
+      "question": "Which Netflix show features a deadly competition involving children's games?",
+      "choices": ["Alice in Borderland", "Money Heist", "Squid Game", "The 8 Show"],
+      "correct_answer": "Squid Game"
+    },
+    {
+      "id": 43,
+      "question": "Which song by Sabrina Carpenter became a global chart-topper in 2024?",
+      "choices": ["Espresso", "Flowers", "Vampire", "Paint The Town Red"],
+      "correct_answer": "Espresso"
+    },
+    {
+      "id": 44,
+      "question": "Who won the Academy Award for Best Picture in 2025?",
+      "choices": ["Oppenheimer", "Anora", "The Brutalist", "Wicked"],
+      "correct_answer": "Anora"
+    },
+    {
+      "id": 45,
+      "question": "What is the name of the coffee shop in the TV show 'Friends'?",
+      "choices": ["Central Perk", "Monk's Cafe", "Luke's Diner", "MacLaren's Pub"],
+      "correct_answer": "Central Perk"
+    },
+    {
+      "id": 46,
+      "question": "Which 2024 FX series won a record-breaking 18 Emmy Awards?",
+      "choices": ["The Bear", "Shōgun", "Succession", "The Crown"],
+      "correct_answer": "Shōgun"
+    },
+    {
+      "id": 47,
+      "question": "Which pop star is known for the hit 'Good Luck, Babe!' and the album 'The Rise and Fall of a Midwest Princess'?",
+      "choices": ["Chappell Roan", "Olivia Rodrigo", "Billie Eilish", "Dua Lipa"],
+      "correct_answer": "Chappell Roan"
+    },
+    {
+      "id": 48,
+      "question": "What is the name of Baby Yoda in 'The Mandalorian'?",
+      "choices": ["Grogu", "Giddeon", "Garsa", "Greef"],
+      "correct_answer": "Grogu"
+    },
+    {
+      "id": 49,
+      "question": "Which actor plays the character of Geralt of Rivia in the first three seasons of 'The Witcher'?",
+      "choices": ["Liam Hemsworth", "Henry Cavill", "Chris Hemsworth", "Tom Hiddleston"],
+      "correct_answer": "Henry Cavill"
+    },
+    {
+      "id": 50,
+      "question": "What is the name of the fictional kingdom in 'Frozen'?",
+      "choices": ["Genovia", "Arendelle", "Far Far Away", "Atlantica"],
+      "correct_answer": "Arendelle"
+    },
+    {
+      "id": 51,
+      "question": "Which artist is known as the 'Queen of Pop'?",
+      "choices": ["Beyoncé", "Lady Gaga", "Madonna", "Britney Spears"],
+      "correct_answer": "Madonna"
+    },
+    {
+      "id": 52,
+      "question": "Which 2025 movie is the third installment in James Cameron's 'Avatar' series?",
+      "choices": ["Avatar: Fire and Ash", "Avatar: The Way of Water", "Avatar: The Seed Bearer", "Avatar: Quest for Eywa"],
+      "correct_answer": "Avatar: Fire and Ash"
+    }
+  ]
+}
