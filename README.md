@@ -36,3 +36,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+https://www.youtube.com/watch?v=uMisPCh3Yh0&list=PLjwdMgw5TTLVQgowwmhNCpXfHMfM9Jove&index=8

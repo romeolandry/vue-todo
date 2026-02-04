@@ -42,4 +42,10 @@
     background-color: #f8f8f8;
     text-align: center;
 }
+.layout header {
+    max-height: 400px;
+}
+.layout footer {
+    max-height: 200px;
+}
 </style>

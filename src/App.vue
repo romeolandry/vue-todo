@@ -44,6 +44,11 @@
       <p v-if="remainingTodos >0">
         Il vous reste {{ remainingTodos }} tâche{{ remainingTodos > 1 ? 's' : '' }} à faire.
       </p>
+      <div>
+        <h1>Timer: used lifecycle hooks</h1>
+          <button @click="showTimer = !showTimer">sow/hidde</button>
+          <Timer v-if="showTimer" />
+      </div>
     </template>
 
     <template v-slot:footer>
@@ -58,9 +63,13 @@
 
 import {computed, ref} from 'vue';
 import Layout from './Layout.vue';
+import Timer from './Timer.vue';
+
 
 const hideCompleted = ref(false);
 const newTodo = ref('');
+const showTimer = ref(true);
+
 const todos = ref([{
     title: 'Apprendre Vue.js',
     completed: false,
