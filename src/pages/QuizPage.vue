@@ -11,7 +11,7 @@
 import {getRandomElements} from '@/functions/array.js'
 import {computed, onMounted, ref, watch} from 'vue';
 // import LoadQuiz1 from 'src\components\LoadQuiz.vue';
-import LoadQuiz from '../components/Loadquiz.vue';
+import LoadQuiz from '../components/LoadQuiz.vue';
 
 const state = ref('loading');
 const quiz = ref(null);
