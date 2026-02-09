@@ -2,15 +2,17 @@
     <div class="question">
         <h5>{{ question.question }}</h5>
         <ul>
-            <li v-for="(choice, index) in randomChoices" :key="choice">
-                <Answer
-                    :id="`answer${index}`"
-                    :value="choice"
-                    :disabled="hasAnswer"
-                    v-model="answer"
-                    :correctAnswer="question.correct_answer"
-                />
-            </li>
+            <TransitionGroup name="list">
+                <li v-for="(choice, index) in randomChoices" :key="choice">
+                    <Answer
+                        :id="`answer${index}`"
+                        :value="choice"
+                        :disabled="hasAnswer"
+                        v-model="answer"
+                        :correctAnswer="question.correct_answer"
+                    />
+                </li>
+            </TransitionGroup>
         </ul>
     </div>
     <div class="button-container">
@@ -62,5 +64,22 @@ h3 {
 ul li {
     display: inline;
 }
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-leave-active {
+    position:absolute;
+}
+
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
 
 </style>
