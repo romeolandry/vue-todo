@@ -22,8 +22,11 @@
 </template>
 <script setup>
 import {shuffleArray } from '@/functions/array.js';
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, inject } from 'vue';
 import Answer from './Answer.vue';
+
+const darkMode = inject('darkMode');
+console.log(darkMode);
 
 const props =defineProps({
     question: Object

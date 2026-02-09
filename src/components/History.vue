@@ -22,7 +22,11 @@
 </template>
 <script setup>
 
-import { computed} from 'vue';
+import { computed, inject} from 'vue';
+
+const darkMode = inject('darkMode');
+console.log("dark mode");
+console.log(darkMode);
 
 const props = defineProps({
     answers: Array,
@@ -39,8 +43,6 @@ const history = computed(() => {
             answer: answer,
             correct_answer: question.correct_answer
         });
-
-        console.log(resp);
     });
     return resp;
 });

@@ -14,8 +14,6 @@ const props = defineProps({
         default: 'v' // Vue's default prefix
     },
 });
-
-console.log(props.name);
 </script>
 
 <style>

@@ -2,12 +2,15 @@
     <div>
         <h1> {{ quiz.title }}</h1>
         <Progress :value="step" :max="quiz.questions.length -1" />
-        <Question :question="question" v-if="state === 'question'" @answer="addAnswer" />
+        
+            <Question :question="question" v-if="state === 'question'" @answer="addAnswer" />
+
         <FadeSlideTransition
             fade
             >
             <Recap v-if="state === 'recap'" :answers="answers" :quiz="quiz"  v-show="state === 'recap'"/>
         </FadeSlideTransition>
+
 
     </div>
 </template>
@@ -17,7 +20,6 @@ import Progress from '../components/Progress.vue';
 import Question from '../components/Question.vue';
 import Recap from '../components/Recap.vue';
 import FadeSlideTransition from '../components/Transitions/FadeSlideTransition.vue'
-
 
 const props = defineProps({
     quiz: Object
