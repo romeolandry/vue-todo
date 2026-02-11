@@ -37,11 +37,16 @@
       <p v-if="remainingTodos >0">
         Il vous reste {{ remainingTodos }} tâche{{ remainingTodos > 1 ? 's' : '' }} à faire.
       </p>
+
+      <hr>
+
       <div>
         <h1>Timer: used lifecycle hooks</h1>
           <button @click="showTimer = !showTimer">sow/hidde</button>
           <Timer v-if="showTimer" />
       </div>
+
+      <hr>
 
       <div>
         <h1>Vue Watchers : change html page title </h1>
