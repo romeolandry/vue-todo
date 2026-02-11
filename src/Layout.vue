@@ -1,16 +1,20 @@
 <template>
     <DarkModeProvider>
-        <div class="layout">
-            <header v-if="$slots.header">
+        <div
+        class="layout "
+        :darkmode="darkmode"
+        :data-theme="darkmode ? 'dark' : 'light'"
+        >
+            <header v-if="$slots.header" :class="classes">
                 <slot name="header" />
             </header>
-            <aside v-if="$slots.aside">
+            <aside v-if="$slots.aside" :class="classes">
                 <slot name="aside" />
             </aside>
-            <main v-if="$slots.main">
+            <main v-if="$slots.main" :class="classes">
                 <slot name="main" />
             </main>
-            <footer v-if="$slots.footer">
+            <footer v-if="$slots.footer" :class="classes">
                 <slot name="footer" />
             </footer>
         </div>
@@ -18,24 +22,22 @@
 </template>
 
 <script setup>
+    import { computed } from 'vue';
+import DarkModeProvider from './components/Providers/DarkModeProvider.vue'
 
-    // import { watch, ref, provide } from 'vue';
-    import DarkModeProvider from './components/Providers/DarkModeProvider.vue'
+    const props = defineProps({
+        darkmode: Boolean,
+    });
 
-    // const toggleDarkMode = ref(true);
+    const classes = computed(() =>{
+        console.log(props.darkmode);
 
-    // watch(toggleDarkMode, (newValue) => {
-    //     provide ('darkMode',newValue);
-    // });
+        dark: props.darkmode==true;
+        light: props.darkmode==false;
+    })
 
 </script>
 <style scoped>
-
-.toggle-dark-container{
-  display: flex;
-  justify-content: end;
-}
-
 .layout {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -52,14 +54,14 @@
 }
 
 .layout main {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     grid-column: 2/3;
 }
 
 .layout header,
 .layout footer {
     grid-column: 1/-1;
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;*/
     text-align: center;
 }
 .layout header {

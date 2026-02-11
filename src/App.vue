@@ -1,12 +1,13 @@
 <template>
-  <Layout>
     <fieldset class="toggle-dark-container">
-    <label>
-        <input name="toggledark" type="checkbox" v-model="toggleDarkMode"  role="switch" aria-invalid="false"/>
-        Toggle Dark
-    </label>
+      <label>
+          <input name="toggledark" type="checkbox" v-model="toggleDarkMode"  role="switch" aria-invalid="false"/>
+          Toggle Dark test
+      </label>
     </fieldset>
-
+  <Layout
+    :darkmode="toggleDarkMode"
+    >
     <template v-slot:header>
       <h1>Learn VueJs</h1>
     </template>
@@ -41,6 +42,9 @@ import { watch, ref, provide } from 'vue';
 
 <style scoped>
 
-
+.toggle-dark-container{
+  display: flex;
+  justify-content: end;
+}
 
 </style>
