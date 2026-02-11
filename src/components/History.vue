@@ -2,7 +2,7 @@
 
 <div>
     <table class="striped">
-        <thead>
+        <thead :data-theme="darkMode ? 'dark' : 'light'">
             <tr>
             <th scope="col">Question</th>
             <th scope="col">Given Answer</th>
@@ -22,11 +22,9 @@
 </template>
 <script setup>
 
-import { computed, inject} from 'vue';
+import { computed, inject, unref} from 'vue';
 
-const darkMode = inject('darkMode');
-console.log("dark mode");
-console.log(darkMode);
+const {darkMode} = inject('darkMode');
 
 const props = defineProps({
     answers: Array,

@@ -2,7 +2,14 @@
     <slot></slot>
 </template>
 <script setup>
-import { provide } from 'vue';
+import { provide, readonly, ref } from 'vue';
 
-provide('darkMode',true);
+const darkMode = ref(true);
+
+provide('darkMode',{
+    darkMode:readonly(),
+    updateMode:()  => {
+        darkMode.value = !darkMode.value;
+    }
+});
 </script>

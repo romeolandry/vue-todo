@@ -3,22 +3,17 @@
         Load error
     </div>
     <div :aria-busy="state=== 'loading'">
-        <DarkModeProvider>
             <LoadQuiz v-if="quiz && state === 'success'" :quiz="quiz" />
-        </DarkModeProvider>
     </div>
 </template>
 
 <script setup>
 import {getRandomElements} from '@/functions/array.js'
-import {computed, onMounted, provide, ref, watch} from 'vue';
-// import LoadQuiz1 from 'src\components\LoadQuiz.vue';
+import {onMounted, ref,inject} from 'vue';
 import LoadQuiz from '../components/LoadQuiz.vue';
-import DarkModeProvider from '../components/Providers/DarkModeProvider.vue'
 
+const {darkMode} = inject('darkMode');
 
-// inject provider
-provide('darkMode', false);
 
 const state = ref('loading');
 const quiz = ref(null);
