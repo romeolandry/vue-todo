@@ -2,7 +2,7 @@
 
     <div :class="classes" role="alert">
         <slot></slot>
-        <button @click="$emit('close')">&times;</button>
+        <button aria-label="Close" @click="$emit('close')">&times;</button>
     </div>
 
 </template>

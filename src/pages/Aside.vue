@@ -12,7 +12,7 @@
 <script setup>
 
 import { watch, ref, inject } from 'vue';
-const {darkMode} = inject('darkMode');
+// const {darkMode} = inject('darkMode');
 
 </script>
 <style>
