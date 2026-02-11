@@ -67,6 +67,7 @@
 import {computed, ref, watch, inject} from 'vue';
 import Timer from '../components/Timer.vue'
 import { useTimer } from '../composable/useTimer';
+import Alert from '../components/Alert.vue'
 
 const {darkMode} = inject('darkMode');
 
