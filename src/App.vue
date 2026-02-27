@@ -1,50 +1,31 @@
 <template>
-    <fieldset class="toggle-dark-container">
-      <label>
-          <input name="toggledark" type="checkbox" v-model="toggleDarkMode"  role="switch" aria-invalid="false"/>
-          Toggle Dark test
-      </label>
-    </fieldset>
-  <Layout
-    :darkmode="toggleDarkMode"
-    >
-    <template v-slot:header>
-      <h1>Learn VueJs</h1>
-    </template>
 
-    <template v-slot:aside>
-      <Aside />
-    </template>
+  <MainMenu :isDark="themeStore.isDark" />
 
-    <template v-slot:main>
+  <div class="app-container">
+    <main class="content-wrapper">
       <RouterView />
-    </template>
-
-    <template v-slot:footer>
-      <p>© 2026 Mon Application Todo</p>
-    </template>
-  </Layout>
+    </main>
+  </div>
 </template>
 
-
 <script setup>
+import { useThemeStore } from '@/stores/theme';
+import MainMenu from './components/MainMenu.vue';
 
-import Layout from './Layout.vue';
-import Aside from "../src/pages/Aside.vue"
-
-import { watch, ref, provide } from 'vue';
-  const toggleDarkMode = ref(true);
-
-  watch(toggleDarkMode, (newValue) => {
-      provide ('darkMode',newValue);
-  });
+const themeStore = useThemeStore();
 </script>
 
 <style scoped>
-
-.toggle-dark-container{
+.app-container {
+  min-height: 100vh;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
 }
-
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 </style>

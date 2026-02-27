@@ -2,7 +2,7 @@
 
 <div>
     <table class="striped">
-        <thead :data-theme="darkMode ? 'dark' : 'light'">
+        <thead :data-theme="isDark ? 'dark' : 'light'">
             <tr>
             <th scope="col">Question</th>
             <th scope="col">Given Answer</th>
@@ -21,10 +21,12 @@
 
 </template>
 <script setup>
+import { useThemeStore } from '@/stores/theme';
+import { computed} from 'vue';
+import { storeToRefs } from 'pinia';
 
-import { computed, inject, unref} from 'vue';
-
-const {darkMode} = inject('darkMode');
+const themeStore = useThemeStore();
+const {isDark} = storeToRefs(themeStore);
 
 const props = defineProps({
     answers: Array,

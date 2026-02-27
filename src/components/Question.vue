@@ -1,5 +1,5 @@
 <template>
-    <div class="question" :data-theme="darkMode ? 'dark' : 'light'">
+    <div class="question">
         <h5>{{ question.question }}</h5>
         <ul>
             <TransitionGroup name="list">
@@ -22,10 +22,8 @@
 </template>
 <script setup>
 import {shuffleArray } from '@/functions/array.js';
-import { ref, computed, watch, inject , unref} from 'vue';
+import { ref, computed, watch} from 'vue';
 import Answer from './Answer.vue';
-
-const {darkMode} = inject('darkMode');
 
 const props =defineProps({
     question: Object
