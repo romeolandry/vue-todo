@@ -55,4 +55,8 @@ onMounted(() => {
   margin-top: 100px;
 }
 
+.page-layout > * {
+    width: 100%;
+}
+
 </style>

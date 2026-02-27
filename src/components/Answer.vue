@@ -1,20 +1,22 @@
 <template>
-
-    <label :for="id" :class="classes">
-        <input
+    <div class="answer-item">
+        <RadioButton
             :disabled="disabled"
-            type="radio"
-            :id="id"
+            v-model="model"
+            :inputId="id"
             name="answer"
             :value="value"
-            v-model="model"
+            size="large"
         />
-        {{ value }}
-    </label>
+        <label :for="id" :class="classes">{{ value }}</label>
+    </div>
 
 </template>
 <script setup>
     import { ref, computed, watch } from 'vue';
+    import RadioButton from 'primevue/radiobutton';
+
+
     const props = defineProps({
         id: String,
         value: String,
@@ -33,6 +35,13 @@
 </script>
 
 <style>
+
+.answer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .disabled {
     opacity: 0.5;
 }

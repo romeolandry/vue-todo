@@ -1,32 +1,21 @@
+
 <template>
-
-<div>
-    <table class="striped">
-        <thead :data-theme="isDark ? 'dark' : 'light'">
-            <tr>
-            <th scope="col">Question</th>
-            <th scope="col">Given Answer</th>
-            <th scope="col">waiting Answer</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item,index) in history" :key="index" :class="item.answer === item.correct_answer ? 'success' : 'danger'">
-                <th scope="row">{{ item.question }}</th>
-                <td>{{ item.answer }}</td>
-                <td>{{ item.correct_answer }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+    <div class="card">
+        <DataTable :value="history" stripedRows :rowClass="rowClass">
+            <Column field="question" header="Question" ></Column>
+            <Column field="answer" header="Answer">
+            </Column>
+            <Column field="correct_answer" header="Correct Answer"></Column>
+        </DataTable>
+    </div>
 </template>
-<script setup>
-import { useThemeStore } from '@/stores/theme';
-import { computed} from 'vue';
-import { storeToRefs } from 'pinia';
 
-const themeStore = useThemeStore();
-const {isDark} = storeToRefs(themeStore);
+<script setup>
+import {computed } from 'vue';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import ColumnGroup from 'primevue/columngroup';   // optional
+import Row from 'primevue/row';
 
 const props = defineProps({
     answers: Array,
@@ -47,6 +36,9 @@ const history = computed(() => {
     return resp;
 });
 
+const rowClass = (data) => {
+    return [{ 'success': data.answer === data.correct_answer }, { 'danger': data.answer !== data.correct_answer }];
+};
 
 </script>
 

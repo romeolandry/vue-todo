@@ -1,7 +1,7 @@
 <template>
     <h1> Recap</h1>
     <p>You {{ hasWon ? quiz.success_message : quiz.failure_message }}</p>
-    <p>You scored {{ score }} out of {{ props.quiz.questions.length }}</p>
+    <h2>You scored {{ score }} out of {{ props.quiz.questions.length }}</h2>
     <History
         :answers="answers"
         :quiz="props.quiz"
@@ -9,7 +9,7 @@
 </template>
 <script setup>
 
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import History from './History.vue';
 
 const props = defineProps({

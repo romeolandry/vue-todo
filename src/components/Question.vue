@@ -1,22 +1,19 @@
 <template>
     <div class="question">
-        <h5>{{ question.question }}</h5>
-        <ul>
-            <TransitionGroup name="list">
-                <li v-for="(choice, index) in randomChoices" :key="choice">
-                    <Answer
-                        :id="`answer${index}`"
-                        :value="choice"
-                        :disabled="hasAnswer"
-                        v-model="answer"
-                        :correctAnswer="question.correct_answer"
-                    />
-                </li>
-            </TransitionGroup>
-        </ul>
-    </div>
+        <h3>{{ question.question }}</h3>
+            <div class="answer-container">
+            <Answer
+                v-for="(choice, index) in randomChoices" :key="choice"
+                :id="`answer${index}`"
+                :value="choice"
+                :disabled="hasAnswer"
+                v-model="answer"
+                :correctAnswer="question.correct_answer"
+            />
+            </div>
+        </div>
     <div class="button-container">
-        <button :disabled="!hasAnswer" @click="emits('answer',answer)">Next</button>
+        <Button :disabled="!hasAnswer" @click="emits('answer',answer)">Next</Button>
     </div>
 
 </template>
@@ -24,6 +21,7 @@
 import {shuffleArray } from '@/functions/array.js';
 import { ref, computed, watch} from 'vue';
 import Answer from './Answer.vue';
+import Button from 'primevue/button';
 
 const props =defineProps({
     question: Object
@@ -45,10 +43,17 @@ watch(() => props.question, () => {
 
 <style>
 .question {
-    background-color: #f0f0f0;
+    background-color: var(--p-gray-100);
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--p-stone-400);
+}
+
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 h3 {
