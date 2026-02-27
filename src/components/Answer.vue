@@ -48,12 +48,12 @@
 
 .right {
     opacity: 1;
-    color: green;
+    color: var(--p-green-500)
 }
 
 .wrong {
     opacity: 1;
-    color: red;
+    color: var(--p-red-500);
 }
 
 </style>

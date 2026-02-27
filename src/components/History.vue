@@ -44,9 +44,9 @@ const rowClass = (data) => {
 
 <style>
 .danger *{
-    color: red;
+    color: var(--p-red-500);
 }
 .success *{
-    color: green;
+    color: var(--p-green-500)
 }
 </style>
